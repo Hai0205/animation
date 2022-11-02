@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #0f0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+  transition: 0.5s;
+}
+.container .btn span {
+  position: relative;
+  z-index: 1000;
+}
+.container .btn:hover {
+  color: #000;
+}
+.container .btn:hover {
+  color: #000;
+}
+.container .btn:nth-child(2) {
+  filter: hue-rotate(90deg);
+}
+.container .btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background: #0f0;
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  left: -20px;
+  box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.container .btn:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  transition-delay: 0s, 0.5s, 1s, 1s;
+  box-shadow: 5px 0 0 #0f0, 5px 0 0 #0f0;
+}
+.container .btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background: #0f0;
+  width: 20px;
+  height: 2px;
+  transform: translateY(-50%);
+  right: -20px;
+  box-shadow: -5px -8px 0 #0f0, -5px 8px 0 #0f0;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.container .btn:hover::after {
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  transition-delay: 0s, 0.5s, 1s, 1s;
+  box-shadow: -5px 0 0 #0f0, -5px 0 0 #0f0;
+}
